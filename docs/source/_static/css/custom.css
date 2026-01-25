@@ -72,3 +72,46 @@ html[data-theme=dark] .bd-main img {
   flex-wrap: wrap;
   justify-content: space-between;
 }
+
+/* ============================================
+   Navbar Navigation: Move links to the left
+   ============================================ */
+
+/* Override the default centering behavior - remove the margin that centers the navbar */
+.bd-header .navbar-header-items__center {
+  margin-left: 0 !important;
+  margin-right: auto !important;
+}
+
+/* Ensure proper spacing between logo and navigation links */
+.bd-header .navbar-header-items__start {
+  margin-right: 1rem !important;
+}
+
+/* Improve spacing between individual navigation links */
+.bd-header .navbar-header-items__center .nav-item {
+  margin-right: 0.75rem !important;
+}
+
+/* Ensure all navbar sections align properly */
+.bd-header .navbar-header-items {
+  display: flex !important;
+  align-items: center !important;
+}
+
+/* Keep the search bar and icons on the right */
+.bd-header .navbar-header-items__end {
+  margin-left: auto !important;
+}
+
+/* Ensure vertical alignment */
+.bd-header .navbar-nav {
+  align-items: center !important;
+}
+
+/* Responsive: maintain left alignment on smaller screens */
+@media (max-width: 960px) {
+  .bd-header .navbar-header-items__center {
+    margin-left: 0 !important;
+  }
+}
