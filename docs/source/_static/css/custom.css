@@ -77,41 +77,58 @@ html[data-theme=dark] .bd-main img {
    Navbar Navigation: Move links to the left
    ============================================ */
 
-/* Remove the column width constraint and use full width */
-.bd-header .navbar-header-items {
-  max-width: 100% !important;
-  flex: 1 !important;
-}
-
-/* Override the margin-end auto that centers the navigation */
-.bd-header .navbar-header-items__center {
-  margin-right: 0 !important;
-  margin-left: 0 !important;
-}
-
-/* Ensure the navbar items container uses flexbox properly */
+/* Make the header inner container use flexbox without wrapping */
 .bd-header .bd-header__inner {
+  display: flex !important;
+  align-items: center !important;
+  flex-wrap: nowrap !important;
+}
+
+/* Remove Bootstrap column constraints from logo container */
+.bd-header .navbar-header-items__start {
+  max-width: none !important;
+  flex: 0 0 auto !important;
+  margin-right: 1rem !important;
+  padding: 0 !important;
+}
+
+/* Remove Bootstrap column constraints from nav items container */
+.bd-header .navbar-header-items {
+  max-width: none !important;
+  flex: 0 1 auto !important;
+  padding: 0 !important;
   display: flex !important;
   align-items: center !important;
 }
 
-/* Add spacing between logo and navigation links */
-.bd-header .navbar-header-items__start {
-  margin-right: 1.5rem !important;
+/* Remove the margin-end auto that centers the navigation */
+.bd-header .navbar-header-items__center {
+  margin-right: 0 !important;
+  margin-left: 0 !important;
+  flex: 0 1 auto !important;
 }
 
-/* Push the end items (search, icons) to the right */
+/* Push the end items (search, icons) to the far right */
 .bd-header .navbar-header-items__end {
   margin-left: auto !important;
+  flex: 0 0 auto !important;
 }
 
-/* Ensure navigation items don't wrap */
+/* Ensure navigation items don't wrap - critical */
 .bd-header .navbar-nav {
   flex-wrap: nowrap !important;
   white-space: nowrap !important;
+  display: flex !important;
 }
 
-/* Add better spacing between navigation items */
+/* Compact spacing between navigation items to prevent wrapping */
 .bd-header .navbar-nav .nav-item {
-  margin-right: 1rem !important;
+  margin-right: 0.5rem !important;
+  flex-shrink: 0 !important;
+}
+
+/* Reduce padding on nav links to save space */
+.bd-header .navbar-nav .nav-link {
+  padding-left: 0.5rem !important;
+  padding-right: 0.5rem !important;
 }
