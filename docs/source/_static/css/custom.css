@@ -108,10 +108,3 @@ html[data-theme=dark] .bd-main img {
 .bd-header .navbar-nav {
   align-items: center !important;
 }
-
-/* Responsive: maintain left alignment on smaller screens */
-@media (max-width: 960px) {
-  .bd-header .navbar-header-items__center {
-    margin-left: 0 !important;
-  }
-}
