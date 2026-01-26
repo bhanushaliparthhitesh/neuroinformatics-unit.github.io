@@ -125,8 +125,9 @@ html_css_files = [
 
 html_favicon = "_static/logo_light.png"
 
-# Cutomize the theme
+# Customize the theme
 html_theme_options = {
+    "navbar_align": "left",  # Align navigation links to the left instead of center
     "icon_links": [
         {
             # Label for this link
