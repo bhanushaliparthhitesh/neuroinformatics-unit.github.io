@@ -72,3 +72,85 @@ html[data-theme=dark] .bd-main img {
   flex-wrap: wrap;
   justify-content: space-between;
 }
+
+/* Footer sponsor logos styling */
+.footer-sponsors {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+}
+
+/* Contact Us section in footer */
+.footer-contact-us {
+  margin-top: 2rem;
+  padding: 1.5rem 0;
+  border-top: 1px solid var(--pst-color-border);
+}
+
+.footer-contact-us h3 {
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+  color: var(--pst-color-primary);
+  font-weight: 600;
+}
+
+.footer-contact-us h4 {
+  font-size: 1rem;
+  margin-top: 1.5rem;
+  margin-bottom: 0.75rem;
+  color: var(--pst-color-text-base);
+  font-weight: 500;
+}
+
+.footer-contact-us .contact-content {
+  margin-top: 0.5rem;
+}
+
+.footer-contact-us p {
+  margin-bottom: 1rem;
+  color: var(--pst-color-text-muted);
+}
+
+.contact-links,
+.social-media-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.social-media-links {
+  flex-direction: column;
+}
+
+.contact-links a,
+.social-media-links a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--pst-color-link);
+  text-decoration: none;
+  font-size: 1rem;
+  transition: color 0.2s ease;
+}
+
+.contact-links a:hover,
+.social-media-links a:hover {
+  color: var(--pst-color-link-hover);
+  text-decoration: underline;
+}
+
+.contact-links a i,
+.social-media-links a i {
+  font-size: 1.25rem;
+}
+
+/* Responsive design for contact section */
+@media (max-width: 768px) {
+  .contact-links,
+  .social-media-links {
+    flex-direction: column;
+    gap: 1rem;
+  }
+}
