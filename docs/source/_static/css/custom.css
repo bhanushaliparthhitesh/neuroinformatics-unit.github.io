@@ -77,7 +77,10 @@ html[data-theme=dark] .bd-main img {
    REDESIGNED FOOTER LAYOUT
    ============================================ */
 
-/* Main footer container with grid layout */
+/* Main footer container with grid layout
+   - 3 columns on desktop for optimal space usage
+   - Gap of 2.5rem provides comfortable breathing room
+   - Top border separates footer from main content */
 .footer-redesigned {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -95,7 +98,9 @@ html[data-theme=dark] .bd-main img {
   gap: 1rem;
 }
 
-/* Footer headings - consistent across all columns */
+/* Footer headings - consistent across all columns
+   - Uppercase for visual distinction
+   - 0.95rem provides subtle hierarchy without overwhelming */
 .footer-heading {
   font-size: 0.95rem;
   font-weight: 600;
@@ -127,6 +132,7 @@ html[data-theme=dark] .bd-main img {
   opacity: 0.8;
 }
 
+/* Sponsor logo height of 45px maintains visibility while keeping footer compact */
 .sponsor-logo {
   height: 45px;
   width: auto;
@@ -146,6 +152,9 @@ html[data-theme=dark] .bd-main img {
   margin-bottom: 1rem;
 }
 
+/* Contact links with icon alignment
+   - 0.625rem gap provides comfortable spacing between icon and text
+   - 1.25rem icon width ensures consistent alignment */
 .footer-link {
   display: inline-flex;
   align-items: center;
@@ -168,7 +177,9 @@ html[data-theme=dark] .bd-main img {
   text-align: center;
 }
 
-/* Social media icons - horizontal layout */
+/* Social media icons - horizontal layout
+   - Icon-only design saves space while remaining recognizable
+   - 2.25rem button size provides good click target (36px) */
 .footer-social-links {
   display: flex;
   gap: 1rem;
@@ -193,7 +204,7 @@ html[data-theme=dark] .bd-main img {
   color: var(--pst-color-link-hover);
   border-color: var(--pst-color-link-hover);
   transform: translateY(-2px);
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 8px var(--pst-color-shadow);
 }
 
 .footer-social-link i {
@@ -233,7 +244,9 @@ html[data-theme=dark] .bd-main img {
    RESPONSIVE DESIGN
    ============================================ */
 
-/* Tablet layout - 2 columns */
+/* Tablet layout - 2 columns
+   - Partners and Contact side by side
+   - Credits span full width for better readability */
 @media (max-width: 992px) {
   .footer-redesigned {
     grid-template-columns: repeat(2, 1fr);
@@ -247,7 +260,9 @@ html[data-theme=dark] .bd-main img {
   }
 }
 
-/* Mobile layout - single column */
+/* Mobile layout - single column
+   - Everything stacked for easy reading
+   - Center alignment for better visual balance */
 @media (max-width: 768px) {
   .footer-redesigned {
     grid-template-columns: 1fr;
@@ -258,12 +273,6 @@ html[data-theme=dark] .bd-main img {
   .footer-column {
     align-items: center;
     text-align: center;
-  }
-  
-  .footer-sponsors-column,
-  .footer-contact-column,
-  .footer-credits-column {
-    align-items: center;
   }
   
   .footer-links-group {
@@ -279,7 +288,9 @@ html[data-theme=dark] .bd-main img {
   }
 }
 
-/* Small mobile adjustments */
+/* Small mobile adjustments
+   - Reduced font sizes for better fit
+   - 40px logo height maintains readability */
 @media (max-width: 480px) {
   .footer-redesigned {
     gap: 1.5rem;
