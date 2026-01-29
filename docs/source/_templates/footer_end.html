@@ -1,38 +1,56 @@
-<div class="footer-sponsors">
-    <a href="https://www.sainsburywellcome.org/web/">
-        <img src="{{ pathto('_static/light-logo-swc.png', 1) }}" alt="Sainsbury Wellcome Centre" class="only-light img-sponsor"/>
-        <img src="{{ pathto('_static/dark-logo-swc.png', 1) }}" alt="Sainsbury Wellcome Centre" class="only-dark img-sponsor"/>
-    </a>
-    <a href="https://www.ucl.ac.uk/gatsby/gatsby-computational-neuroscience-unit">
-        <img src="{{ pathto('_static/light-logo-gatsby.png', 1) }}" alt="Gatsby Computational Neuroscience Unit" class="only-light img-sponsor"/>
-        <img src="{{ pathto('_static/dark-logo-gatsby.png', 1) }}" alt="Gatsby Computational Neuroscience Unit" class="only-dark img-sponsor"/>
-    </a>
-    <a href="https://www.ucl.ac.uk/">
-        <img src="{{ pathto('_static/light-logo-ucl.png', 1) }}" alt="University College London" class="only-light img-sponsor"/>
-        <img src="{{ pathto('_static/dark-logo-ucl.png', 1) }}" alt="University College London" class="only-dark img-sponsor"/>
-    </a>
-</div>
-
-<div class="footer-contact-us">
-    <h3>Contact Us</h3>
-    <div class="contact-content">
-        <p>Get in touch with the Neuroinformatics Unit:</p>
-        <div class="contact-links">
-            <a href="https://github.com/neuroinformatics-unit/" target="_blank" rel="noopener noreferrer" title="GitHub">
-                <i class="fa-brands fa-github"></i> GitHub
+<div class="footer-redesigned">
+    <!-- Sponsors Column -->
+    <div class="footer-column footer-sponsors-column">
+        <h4 class="footer-heading">Our Partners</h4>
+        <div class="footer-sponsors-grid">
+            <a href="https://www.sainsburywellcome.org/web/" title="Sainsbury Wellcome Centre">
+                <img src="{{ pathto('_static/light-logo-swc.png', 1) }}" alt="Sainsbury Wellcome Centre" class="only-light sponsor-logo"/>
+                <img src="{{ pathto('_static/dark-logo-swc.png', 1) }}" alt="Sainsbury Wellcome Centre" class="only-dark sponsor-logo"/>
             </a>
-            <a href="https://neuroinformatics.zulipchat.com/" target="_blank" rel="noopener noreferrer" title="Zulip Chat">
-                <i class="fa-solid fa-comments"></i> Zulip Chat
+            <a href="https://www.ucl.ac.uk/gatsby/gatsby-computational-neuroscience-unit" title="Gatsby Computational Neuroscience Unit">
+                <img src="{{ pathto('_static/light-logo-gatsby.png', 1) }}" alt="Gatsby Computational Neuroscience Unit" class="only-light sponsor-logo"/>
+                <img src="{{ pathto('_static/dark-logo-gatsby.png', 1) }}" alt="Gatsby Computational Neuroscience Unit" class="only-dark sponsor-logo"/>
+            </a>
+            <a href="https://www.ucl.ac.uk/" title="University College London">
+                <img src="{{ pathto('_static/light-logo-ucl.png', 1) }}" alt="University College London" class="only-light sponsor-logo"/>
+                <img src="{{ pathto('_static/dark-logo-ucl.png', 1) }}" alt="University College London" class="only-dark sponsor-logo"/>
             </a>
         </div>
-        <div class="social-media-links">
-            <h4>Follow Us</h4>
-            <a href="https://mastodon.online/@neuroinformatics" target="_blank" rel="noopener noreferrer" title="Mastodon">
-                <i class="fa-brands fa-mastodon"></i> Mastodon
+    </div>
+
+    <!-- Contact & Social Column -->
+    <div class="footer-column footer-contact-column">
+        <h4 class="footer-heading">Connect With Us</h4>
+        <div class="footer-links-group">
+            <a href="https://github.com/neuroinformatics-unit/" target="_blank" rel="noopener noreferrer" class="footer-link" title="GitHub">
+                <i class="fa-brands fa-github"></i>
+                <span>GitHub</span>
             </a>
-            <a href="https://bsky.app/profile/neuroinformatics.dev" target="_blank" rel="noopener noreferrer" title="Bluesky">
-                <i class="fa-brands fa-bluesky"></i> Bluesky
+            <a href="https://neuroinformatics.zulipchat.com/" target="_blank" rel="noopener noreferrer" class="footer-link" title="Zulip Chat">
+                <i class="fa-solid fa-comments"></i>
+                <span>Zulip Chat</span>
             </a>
+        </div>
+        <div class="footer-social-links">
+            <a href="https://mastodon.online/@neuroinformatics" target="_blank" rel="noopener noreferrer" class="footer-social-link" title="Mastodon" aria-label="Follow us on Mastodon">
+                <i class="fa-brands fa-mastodon"></i>
+            </a>
+            <a href="https://bsky.app/profile/neuroinformatics.dev" target="_blank" rel="noopener noreferrer" class="footer-social-link" title="Bluesky" aria-label="Follow us on Bluesky">
+                <i class="fa-brands fa-bluesky"></i>
+            </a>
+        </div>
+    </div>
+
+    <!-- Credits Column -->
+    <div class="footer-column footer-credits-column">
+        <h4 class="footer-heading">Built With</h4>
+        <div class="footer-credits">
+            <p>
+                <a href="https://sphinx-doc.org/" target="_blank" rel="noopener noreferrer">Sphinx</a> {{ sphinx_version|e }}
+            </p>
+            <p>
+                <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html" target="_blank" rel="noopener noreferrer">PyData Sphinx Theme</a> {{ theme_version }}
+            </p>
         </div>
     </div>
 </div>

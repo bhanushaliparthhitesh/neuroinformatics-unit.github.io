@@ -73,83 +73,227 @@ html[data-theme=dark] .bd-main img {
   justify-content: space-between;
 }
 
-/* Footer sponsor logos styling */
-.footer-sponsors {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  margin-bottom: 2rem;
-}
+/* ============================================
+   REDESIGNED FOOTER LAYOUT
+   ============================================ */
 
-/* Contact Us section in footer */
-.footer-contact-us {
+/* Main footer container with grid layout */
+.footer-redesigned {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2.5rem;
+  padding: 2rem 0 1.5rem;
   margin-top: 2rem;
-  padding: 1.5rem 0;
   border-top: 1px solid var(--pst-color-border);
+  background: var(--pst-color-background);
 }
 
-.footer-contact-us h3 {
-  font-size: 1.3rem;
-  margin-bottom: 1rem;
-  color: var(--pst-color-primary);
+/* Footer column base styles */
+.footer-column {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+/* Footer headings - consistent across all columns */
+.footer-heading {
+  font-size: 0.95rem;
   font-weight: 600;
-}
-
-.footer-contact-us h4 {
-  font-size: 1rem;
-  margin-top: 1.5rem;
-  margin-bottom: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
   color: var(--pst-color-text-base);
-  font-weight: 500;
+  margin: 0 0 0.75rem 0;
+  opacity: 0.9;
 }
 
-.footer-contact-us .contact-content {
+/* ---- Sponsors Column ---- */
+.footer-sponsors-column {
+  align-items: flex-start;
+}
+
+.footer-sponsors-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 100%;
+}
+
+.footer-sponsors-grid a {
+  display: block;
+  transition: opacity 0.2s ease;
+}
+
+.footer-sponsors-grid a:hover {
+  opacity: 0.8;
+}
+
+.sponsor-logo {
+  height: 45px;
+  width: auto;
+  object-fit: contain;
+  display: block;
+}
+
+/* ---- Contact & Social Column ---- */
+.footer-contact-column {
+  align-items: flex-start;
+}
+
+.footer-links-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.footer-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.625rem;
+  color: var(--pst-color-link);
+  text-decoration: none;
+  font-size: 0.95rem;
+  transition: all 0.2s ease;
+  padding: 0.25rem 0;
+}
+
+.footer-link:hover {
+  color: var(--pst-color-link-hover);
+  transform: translateX(2px);
+}
+
+.footer-link i {
+  font-size: 1.15rem;
+  width: 1.25rem;
+  text-align: center;
+}
+
+/* Social media icons - horizontal layout */
+.footer-social-links {
+  display: flex;
+  gap: 1rem;
   margin-top: 0.5rem;
 }
 
-.footer-contact-us p {
-  margin-bottom: 1rem;
-  color: var(--pst-color-text-muted);
-}
-
-.contact-links,
-.social-media-links {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1.5rem;
-  margin-bottom: 1rem;
-}
-
-.social-media-links {
-  flex-direction: column;
-}
-
-.contact-links a,
-.social-media-links a {
+.footer-social-link {
   display: inline-flex;
   align-items: center;
+  justify-content: center;
+  width: 2.25rem;
+  height: 2.25rem;
+  color: var(--pst-color-link);
+  background: var(--pst-color-surface);
+  border: 1px solid var(--pst-color-border);
+  border-radius: 50%;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.footer-social-link:hover {
+  color: var(--pst-color-link-hover);
+  border-color: var(--pst-color-link-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.footer-social-link i {
+  font-size: 1.15rem;
+}
+
+/* ---- Credits Column ---- */
+.footer-credits-column {
+  align-items: flex-start;
+}
+
+.footer-credits {
+  display: flex;
+  flex-direction: column;
   gap: 0.5rem;
+}
+
+.footer-credits p {
+  margin: 0;
+  font-size: 0.875rem;
+  color: var(--pst-color-text-muted);
+  line-height: 1.5;
+}
+
+.footer-credits a {
   color: var(--pst-color-link);
   text-decoration: none;
-  font-size: 1rem;
   transition: color 0.2s ease;
 }
 
-.contact-links a:hover,
-.social-media-links a:hover {
+.footer-credits a:hover {
   color: var(--pst-color-link-hover);
   text-decoration: underline;
 }
 
-.contact-links a i,
-.social-media-links a i {
-  font-size: 1.25rem;
+/* ============================================
+   RESPONSIVE DESIGN
+   ============================================ */
+
+/* Tablet layout - 2 columns */
+@media (max-width: 992px) {
+  .footer-redesigned {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+  
+  .footer-credits-column {
+    grid-column: 1 / -1;
+    text-align: center;
+    align-items: center;
+  }
 }
 
-/* Responsive design for contact section */
+/* Mobile layout - single column */
 @media (max-width: 768px) {
-  .contact-links {
-    flex-direction: column;
-    gap: 1rem;
+  .footer-redesigned {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    padding: 1.5rem 0 1rem;
+  }
+  
+  .footer-column {
+    align-items: center;
+    text-align: center;
+  }
+  
+  .footer-sponsors-column,
+  .footer-contact-column,
+  .footer-credits-column {
+    align-items: center;
+  }
+  
+  .footer-links-group {
+    align-items: center;
+  }
+  
+  .footer-social-links {
+    justify-content: center;
+  }
+  
+  .sponsor-logo {
+    margin: 0 auto;
+  }
+}
+
+/* Small mobile adjustments */
+@media (max-width: 480px) {
+  .footer-redesigned {
+    gap: 1.5rem;
+  }
+  
+  .footer-heading {
+    font-size: 0.875rem;
+  }
+  
+  .footer-link {
+    font-size: 0.875rem;
+  }
+  
+  .sponsor-logo {
+    height: 40px;
   }
 }
