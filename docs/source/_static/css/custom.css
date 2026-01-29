@@ -77,18 +77,53 @@ html[data-theme=dark] .bd-main img {
    REDESIGNED FOOTER LAYOUT
    ============================================ */
 
+/* Fix footer grid layout for better horizontal alignment
+   - Creates a 2-column grid structure
+   - Left column for Sphinx credits, right column for Partners/Connect sections
+   - Reduces excessive white space and improves visual balance */
+.bd-footer__inner {
+  display: grid !important;
+  grid-template-columns: 1fr 2fr;
+  gap: 3rem;
+  align-items: start;
+  max-width: var(--pst-max-width);
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+/* Style the left footer section (Sphinx credits) */
+.footer-items__start {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.footer-items__start .footer-item {
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+.footer-items__start p {
+  margin: 0.25rem 0;
+}
+
+/* Style the right footer section (Partners and Connect) */
+.footer-items__end {
+  display: flex;
+  justify-content: flex-end;
+}
+
 /* Main footer container with vertical layout
    - Single column stacking Partners and Connect sections
-   - Gap of 2.5rem provides comfortable breathing room between sections
-   - Top border separates footer from main content */
+   - Gap of 2.5rem provides comfortable breathing room between sections */
 .footer-redesigned {
   display: flex;
   flex-direction: column;
-  gap: 2.5rem;
-  padding: 2rem 0 1.5rem;
-  margin-top: 2rem;
-  border-top: 1px solid var(--pst-color-border);
-  background: var(--pst-color-background);
+  gap: 2rem;
+  padding: 0;
+  margin: 0;
+  border-top: none;
+  background: transparent;
 }
 
 /* Footer column base styles */
@@ -224,12 +259,26 @@ html[data-theme=dark] .bd-main img {
    ============================================ */
 
 /* Mobile layout adjustments
+   - Stack footer columns vertically on smaller screens
    - Center alignment for better visual balance on smaller screens
    - Horizontal layout maintained with wrapping */
 @media (max-width: 768px) {
+  .bd-footer__inner {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    padding: 1.5rem 1rem;
+  }
+  
+  .footer-items__start {
+    text-align: center;
+  }
+  
+  .footer-items__end {
+    justify-content: center;
+  }
+  
   .footer-redesigned {
     gap: 2rem;
-    padding: 1.5rem 0 1rem;
   }
   
   .footer-column {
