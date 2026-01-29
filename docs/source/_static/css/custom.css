@@ -118,7 +118,9 @@ html[data-theme=dark] .bd-main img {
 
 .footer-sponsors-grid {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
   gap: 1rem;
   width: 100%;
 }
@@ -147,8 +149,10 @@ html[data-theme=dark] .bd-main img {
 
 .footer-links-group {
   display: flex;
-  flex-direction: column;
-  gap: 0.75rem;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1.5rem;
   margin-bottom: 1rem;
 }
 
@@ -177,13 +181,15 @@ html[data-theme=dark] .bd-main img {
   text-align: center;
 }
 
-/* Social media icons - vertical layout
+/* Social media icons - horizontal layout
    - Icon-only design saves space while remaining recognizable
    - 2.25rem button size provides good click target (36px)
-   - Vertical stacking ensures consistency with other footer sections */
+   - Horizontal alignment with wrapping for responsive behavior */
 .footer-social-links {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
   gap: 1rem;
   margin-top: 0.5rem;
 }
@@ -218,7 +224,8 @@ html[data-theme=dark] .bd-main img {
    ============================================ */
 
 /* Mobile layout adjustments
-   - Center alignment for better visual balance on smaller screens */
+   - Center alignment for better visual balance on smaller screens
+   - Horizontal layout maintained with wrapping */
 @media (max-width: 768px) {
   .footer-redesigned {
     gap: 2rem;
@@ -230,12 +237,16 @@ html[data-theme=dark] .bd-main img {
     text-align: center;
   }
   
+  .footer-sponsors-grid {
+    justify-content: center;
+  }
+  
   .footer-links-group {
-    align-items: center;
+    justify-content: center;
   }
   
   .footer-social-links {
-    align-items: center;
+    justify-content: center;
   }
   
   .sponsor-logo {
