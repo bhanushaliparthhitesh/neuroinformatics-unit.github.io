@@ -77,13 +77,13 @@ html[data-theme=dark] .bd-main img {
    REDESIGNED FOOTER LAYOUT
    ============================================ */
 
-/* Main footer container with grid layout
-   - 3 columns on desktop for optimal space usage
-   - Gap of 2.5rem provides comfortable breathing room
+/* Main footer container with vertical layout
+   - Single column stacking Partners and Connect sections
+   - Gap of 2.5rem provides comfortable breathing room between sections
    - Top border separates footer from main content */
 .footer-redesigned {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  display: flex;
+  flex-direction: column;
   gap: 2.5rem;
   padding: 2rem 0 1.5rem;
   margin-top: 2rem;
@@ -98,7 +98,7 @@ html[data-theme=dark] .bd-main img {
   gap: 1rem;
 }
 
-/* Footer headings - consistent across all columns
+/* Footer headings - consistent across all sections
    - Uppercase for visual distinction
    - 0.95rem provides subtle hierarchy without overwhelming */
 .footer-heading {
@@ -111,7 +111,7 @@ html[data-theme=dark] .bd-main img {
   opacity: 0.9;
 }
 
-/* ---- Sponsors Column ---- */
+/* ---- Sponsors Section ---- */
 .footer-sponsors-column {
   align-items: flex-start;
 }
@@ -140,7 +140,7 @@ html[data-theme=dark] .bd-main img {
   display: block;
 }
 
-/* ---- Contact & Social Column ---- */
+/* ---- Contact & Social Section ---- */
 .footer-contact-column {
   align-items: flex-start;
 }
@@ -211,61 +211,14 @@ html[data-theme=dark] .bd-main img {
   font-size: 1.15rem;
 }
 
-/* ---- Credits Column ---- */
-.footer-credits-column {
-  align-items: flex-start;
-}
-
-.footer-credits {
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
-}
-
-.footer-credits p {
-  margin: 0;
-  font-size: 0.875rem;
-  color: var(--pst-color-text-muted);
-  line-height: 1.5;
-}
-
-.footer-credits a {
-  color: var(--pst-color-link);
-  text-decoration: none;
-  transition: color 0.2s ease;
-}
-
-.footer-credits a:hover {
-  color: var(--pst-color-link-hover);
-  text-decoration: underline;
-}
-
 /* ============================================
    RESPONSIVE DESIGN
    ============================================ */
 
-/* Tablet layout - 2 columns
-   - Partners and Contact side by side
-   - Credits span full width for better readability */
-@media (max-width: 992px) {
-  .footer-redesigned {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 2rem;
-  }
-  
-  .footer-credits-column {
-    grid-column: 1 / -1;
-    text-align: center;
-    align-items: center;
-  }
-}
-
-/* Mobile layout - single column
-   - Everything stacked for easy reading
-   - Center alignment for better visual balance */
+/* Mobile layout adjustments
+   - Center alignment for better visual balance on smaller screens */
 @media (max-width: 768px) {
   .footer-redesigned {
-    grid-template-columns: 1fr;
     gap: 2rem;
     padding: 1.5rem 0 1rem;
   }
@@ -289,7 +242,7 @@ html[data-theme=dark] .bd-main img {
 }
 
 /* Small mobile adjustments
-   - Reduced font sizes for better fit
+   - Reduced spacing for better fit
    - 40px logo height maintains readability */
 @media (max-width: 480px) {
   .footer-redesigned {
