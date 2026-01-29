@@ -80,7 +80,8 @@ html[data-theme=dark] .bd-main img {
 /* Fix footer grid layout for better horizontal alignment
    - Creates a 2-column grid structure
    - Left column for Sphinx credits, right column for Partners/Connect sections
-   - Reduces excessive white space and improves visual balance */
+   - Reduces excessive white space and improves visual balance
+   - Note: !important is necessary to override PyData Sphinx Theme's default flexbox layout */
 .bd-footer__inner {
   display: grid !important;
   grid-template-columns: 1fr 2fr;
@@ -115,7 +116,7 @@ html[data-theme=dark] .bd-main img {
 
 /* Main footer container with vertical layout
    - Single column stacking Partners and Connect sections
-   - Gap of 2.5rem provides comfortable breathing room between sections */
+   - Gap of 2rem provides comfortable breathing room between sections */
 .footer-redesigned {
   display: flex;
   flex-direction: column;
