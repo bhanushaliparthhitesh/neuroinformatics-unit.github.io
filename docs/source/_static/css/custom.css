@@ -148,8 +148,7 @@ html[data-theme=dark] .bd-main img {
 
 /* Responsive design for contact section */
 @media (max-width: 768px) {
-  .contact-links,
-  .social-media-links {
+  .contact-links {
     flex-direction: column;
     gap: 1rem;
   }
