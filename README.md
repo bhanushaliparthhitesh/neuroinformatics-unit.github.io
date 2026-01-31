@@ -4,6 +4,10 @@
 
 The main website of the [SWC](https://www.sainsburywellcome.org/web/)/[GCNU](https://www.ucl.ac.uk/gatsby/gatsby-computational-neuroscience-unit) Neuroinformatics Unit.
 
+## Contributing
+
+We welcome contributions! Please see our [CONTRIBUTING.md](CONTRIBUTING.md) file for guidelines on how to contribute to this website.
+
 ## Website structure
 
 The website is built using [Sphinx](https://www.sphinx-doc.org/en/master/) and the [PyData Sphinx Theme](https://pydata-sphinx-theme.readthedocs.io/en/latest/).
