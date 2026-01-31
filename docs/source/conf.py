@@ -165,3 +165,54 @@ html_sidebars = {
 redirects = {
     'open-software-week/index.html': '/open-software-summer-school/index.html',
 }
+
+# Define footer links and partner information in html_context
+# This makes the footer maintainable via conf.py instead of hardcoding in templates
+html_context = {
+    "footer_partners": [
+        {
+            "name": "Sainsbury Wellcome Centre",
+            "url": "https://www.sainsburywellcome.org/web/",
+            "logo_light": "_static/light-logo-swc.png",
+            "logo_dark": "_static/dark-logo-swc.png",
+        },
+        {
+            "name": "Gatsby Computational Neuroscience Unit",
+            "url": "https://www.ucl.ac.uk/gatsby/gatsby-computational-neuroscience-unit",
+            "logo_light": "_static/light-logo-gatsby.png",
+            "logo_dark": "_static/dark-logo-gatsby.png",
+        },
+        {
+            "name": "University College London",
+            "url": "https://www.ucl.ac.uk/",
+            "logo_light": "_static/light-logo-ucl.png",
+            "logo_dark": "_static/dark-logo-ucl.png",
+        },
+    ],
+    "footer_connect_links": [
+        {
+            "name": "GitHub",
+            "url": "https://github.com/neuroinformatics-unit/",
+            "icon": "fa-brands fa-github",
+            "type": "text_with_icon",  # Shows icon + text
+        },
+        {
+            "name": "Zulip Chat",
+            "url": "https://neuroinformatics.zulipchat.com/",
+            "icon": "fa-solid fa-comments",
+            "type": "text_with_icon",  # Shows icon + text
+        },
+        {
+            "name": "Mastodon",
+            "url": "https://mastodon.online/@neuroinformatics",
+            "icon": "fa-brands fa-mastodon",
+            "type": "icon_only",  # Shows only icon in circular button
+        },
+        {
+            "name": "Bluesky",
+            "url": "https://bsky.app/profile/neuroinformatics.dev",
+            "icon": "fa-brands fa-bluesky",
+            "type": "icon_only",  # Shows only icon in circular button
+        },
+    ],
+}
