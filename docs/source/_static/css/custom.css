@@ -179,8 +179,12 @@ html[data-theme=dark] .bd-main img {
 }
 
 /* ---- Contact & Social Section ---- */
+/* Display all links (GitHub, Zulip, Mastodon, Bluesky) in single horizontal line */
 .footer-contact-column {
   align-items: flex-start;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 1.5rem;
 }
 
 .footer-links-group {
@@ -189,7 +193,7 @@ html[data-theme=dark] .bd-main img {
   flex-wrap: wrap;
   align-items: center;
   gap: 1.5rem;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0;
 }
 
 /* Contact links with icon alignment
@@ -217,7 +221,7 @@ html[data-theme=dark] .bd-main img {
   text-align: center;
 }
 
-/* Social media icons - horizontal layout
+/* Social media icons - horizontal layout in same line as contact links
    - Icon-only design saves space while remaining recognizable
    - 2.25rem button size provides good click target (36px)
    - Horizontal alignment with wrapping for responsive behavior */
@@ -226,7 +230,7 @@ html[data-theme=dark] .bd-main img {
   flex-direction: row;
   flex-wrap: wrap;
   align-items: center;
-  gap: 1rem;
+  gap: 1.5rem;
   margin-top: 0;
 }
 
