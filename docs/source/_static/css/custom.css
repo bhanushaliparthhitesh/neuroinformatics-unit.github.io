@@ -116,34 +116,39 @@ html[data-theme=dark] .bd-main img {
 
 /* Main footer container with vertical layout
    - Single column stacking Partners and Connect sections
-   - Gap of 1.5rem provides comfortable breathing room between sections */
+   - Gap of 2.5rem provides clear visual separation between sections
+   - Padding adds breathing room and prevents edge crowding */
 .footer-redesigned {
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
-  padding: 0;
+  gap: 2.5rem;
+  padding: 1rem 0;
   margin: 0;
   border-top: none;
   background: transparent;
 }
 
-/* Footer column base styles */
+/* Footer column base styles
+   - Increased gap for better spacing within each section
+   - align-items: flex-start ensures consistent baseline alignment */
 .footer-column {
   display: flex;
   flex-direction: column;
-  gap: 0.75rem;
+  gap: 1rem;
+  align-items: flex-start;
 }
 
 /* Footer headings - consistent across all sections
    - Uppercase for visual distinction
-   - 0.95rem provides subtle hierarchy without overwhelming */
+   - 0.95rem provides subtle hierarchy without overwhelming
+   - Increased bottom margin for better separation from content */
 .footer-heading {
   font-size: 0.95rem;
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.05em;
   color: var(--pst-color-text-base);
-  margin: 0 0 0.5rem 0;
+  margin: 0 0 0.75rem 0;
   opacity: 0.9;
 }
 
@@ -157,7 +162,7 @@ html[data-theme=dark] .bd-main img {
   flex-direction: row;
   flex-wrap: wrap;
   align-items: center;
-  gap: 1rem;
+  gap: 1.5rem;
   width: 100%;
 }
 
@@ -170,16 +175,18 @@ html[data-theme=dark] .bd-main img {
   opacity: 0.8;
 }
 
-/* Sponsor logo height of 45px maintains visibility while keeping footer compact */
+/* Sponsor logo height of 50px for better visibility while maintaining clean layout */
 .sponsor-logo {
-  height: 45px;
+  height: 50px;
   width: auto;
   object-fit: contain;
   display: block;
 }
 
 /* ---- Contact & Social Section ---- */
-/* Display all links (GitHub, Zulip, Mastodon, Bluesky) in single horizontal line */
+/* Display all links (GitHub, Zulip, Mastodon, Bluesky) in single horizontal line
+   - Row layout with proper wrapping for responsive behavior
+   - Increased gap for better visual spacing between elements */
 .footer-contact-column {
   align-items: flex-start;
   flex-direction: row;
@@ -192,7 +199,7 @@ html[data-theme=dark] .bd-main img {
   flex-direction: row;
   flex-wrap: wrap;
   align-items: center;
-  gap: 1.5rem;
+  gap: 1.75rem;
   margin-bottom: 0;
 }
 
@@ -224,13 +231,14 @@ html[data-theme=dark] .bd-main img {
 /* Social media icons - horizontal layout in same line as contact links
    - Icon-only design saves space while remaining recognizable
    - 2.25rem button size provides good click target (36px)
-   - Horizontal alignment with wrapping for responsive behavior */
+   - Horizontal alignment with wrapping for responsive behavior
+   - Increased gap for better visual spacing */
 .footer-social-links {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   align-items: center;
-  gap: 1.5rem;
+  gap: 1.75rem;
   margin-top: 0;
 }
 
@@ -266,7 +274,7 @@ html[data-theme=dark] .bd-main img {
 /* Mobile layout adjustments
    - Stack footer columns vertically on smaller screens
    - Center alignment for better visual balance on smaller screens
-   - Horizontal layout maintained with wrapping */
+   - Maintain adequate spacing even on mobile */
 @media (max-width: 768px) {
   .bd-footer__inner {
     grid-template-columns: 1fr;
@@ -283,7 +291,7 @@ html[data-theme=dark] .bd-main img {
   }
   
   .footer-redesigned {
-    gap: 1.5rem;
+    gap: 2rem;
   }
   
   .footer-column {
