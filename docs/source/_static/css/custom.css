@@ -186,12 +186,14 @@ html[data-theme=dark] .bd-main img {
 /* ---- Contact & Social Section ---- */
 /* Display all links (GitHub, Zulip, Mastodon, Bluesky) in single horizontal line
    - Row layout with proper wrapping for responsive behavior
-   - Increased gap for better visual spacing between elements */
+   - Increased gap for better visual spacing between elements
+   - Small top margin adds consistent visual separation from Partners section */
 .footer-contact-column {
   align-items: flex-start;
   flex-direction: row;
   flex-wrap: wrap;
   gap: 1.5rem;
+  margin-top: 0.75rem;
 }
 
 .footer-links-group {
