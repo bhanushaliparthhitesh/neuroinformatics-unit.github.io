@@ -138,6 +138,31 @@ html_theme_options = {
             # The type of image to be used (see below for details)
             "type": "fontawesome",
         },
+        {
+            "name": "LinkedIn",
+            "url": "https://www.linkedin.com/company/neuroinformatics-unit",
+            "icon": "fa-brands fa-linkedin",
+        },
+        {
+            "name": "Mastodon",
+            "url": "https://mastodon.online/@neuroinformatics",
+            "icon": "fa-brands fa-mastodon",
+        },
+        {
+            "name": "Bluesky",
+            "url": "https://bsky.app/profile/neuroinformatics.dev",
+            "icon": "fa-brands fa-bluesky",
+        },
+        {
+            # Label for this link
+            "name": "Zulip (chat)",
+            # URL where the link will redirect
+            "url": "https://neuroinformatics.zulipchat.com/",  # required
+            # Icon class (if "type": "fontawesome"), or path to local image (if "type": "local")
+            "icon": "fa-solid fa-comments",
+            # The type of image to be used (see below for details)
+            "type": "fontawesome",
+        },
     ],
     "logo": {
         "text": "NIU",
