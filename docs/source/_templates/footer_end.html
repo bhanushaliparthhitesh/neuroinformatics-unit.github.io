@@ -1,14 +1,33 @@
-<div class="things-in-a-row">
-    <a href="https://www.sainsburywellcome.org/web/">
-        <img src="{{ pathto('_static/light-logo-swc.png', 1) }}" alt="Sponsors" class="only-light img-sponsor"/>
-        <img src="{{ pathto('_static/dark-logo-swc.png', 1) }}" alt="Sponsors" class="only-dark img-sponsor"/>
-    </a>
-    <a href="https://www.ucl.ac.uk/gatsby/gatsby-computational-neuroscience-unit">
-        <img src="{{ pathto('_static/light-logo-gatsby.png', 1) }}" alt="Sponsors" class="only-light img-sponsor"/>
-        <img src="{{ pathto('_static/dark-logo-gatsby.png', 1) }}" alt="Sponsors" class="only-dark img-sponsor"/>
-    </a>
-    <a href="https://www.ucl.ac.uk/">
-        <img src="{{ pathto('_static/light-logo-ucl.png', 1) }}" alt="Sponsors" class="only-light img-sponsor"/>
-        <img src="{{ pathto('_static/dark-logo-ucl.png', 1) }}" alt="Sponsors" class="only-dark img-sponsor"/>
-    </a>
+<div class="footer-redesigned">
+    <!-- Sponsors Section -->
+    <div class="footer-column footer-sponsors-column">
+        <h4 class="footer-heading">Our Partners</h4>
+        <div class="footer-sponsors-grid">
+            {% for partner in footer_partners %}
+            <a href="{{ partner.url }}" title="{{ partner.name }}">
+                <img src="{{ pathto(partner.logo_light, 1) }}" alt="{{ partner.name }}" class="only-light sponsor-logo"/>
+                <img src="{{ pathto(partner.logo_dark, 1) }}" alt="{{ partner.name }}" class="only-dark sponsor-logo"/>
+            </a>
+            {% endfor %}
+        </div>
+    </div>
+
+    <!-- Connect With Us Section - All links in single horizontal line -->
+    <div class="footer-column footer-contact-column">
+        <h4 class="footer-heading">Connect With Us</h4>
+        <div class="footer-links-group">
+            {% for link in footer_connect_links %}
+            {% if link.type == "text_with_icon" %}
+            <a href="{{ link.url }}" target="_blank" rel="noopener noreferrer" class="footer-link" title="{{ link.name }}">
+                <i class="{{ link.icon }}"></i>
+                <span>{{ link.name }}</span>
+            </a>
+            {% elif link.type == "icon_only" %}
+            <a href="{{ link.url }}" target="_blank" rel="noopener noreferrer" class="footer-social-link" title="Follow us on {{ link.name }}" aria-label="{{ link.name }}">
+                <i class="{{ link.icon }}"></i>
+            </a>
+            {% endif %}
+            {% endfor %}
+        </div>
+    </div>
 </div>
