@@ -73,15 +73,9 @@ html[data-theme=dark] .bd-main img {
   justify-content: space-between;
 }
 
-/* ============================================
-   REDESIGNED FOOTER LAYOUT
-   ============================================ */
+ 
 
-/* Fix footer grid layout for better horizontal alignment
-   - Creates a 2-column grid structure
-   - Left column for Sphinx credits, right column for Partners/Connect sections
-   - Reduces excessive white space and improves visual balance
-   - Note: !important is necessary to override PyData Sphinx Theme's default flexbox layout */
+/* Fix footer grid layout */
 .bd-footer__inner {
   display: grid !important;
   grid-template-columns: 1fr 2fr;
@@ -92,7 +86,7 @@ html[data-theme=dark] .bd-main img {
   padding: 1.5rem 1rem;
 }
 
-/* Style the left footer section (Sphinx credits) */
+/* Style the left footer section*/
 .footer-items__start {
   display: flex;
   flex-direction: column;
@@ -108,16 +102,13 @@ html[data-theme=dark] .bd-main img {
   margin: 0.25rem 0;
 }
 
-/* Style the right footer section (Partners and Connect) */
+/* Style the right footer section*/
 .footer-items__end {
   display: flex;
   justify-content: flex-end;
 }
 
-/* Main footer container with vertical layout
-   - Single column stacking Partners and Connect sections
-   - Gap of 2.5rem provides clear visual separation between sections
-   - Padding adds breathing room and prevents edge crowding */
+/* Main footer container with vertical layout*/
 .footer-redesigned {
   display: flex;
   flex-direction: column;
@@ -128,9 +119,7 @@ html[data-theme=dark] .bd-main img {
   background: transparent;
 }
 
-/* Footer column base styles
-   - Increased gap for better spacing within each section
-   - align-items: flex-start ensures consistent baseline alignment */
+/* Footer column base styles */
 .footer-column {
   display: flex;
   flex-direction: column;
@@ -138,10 +127,7 @@ html[data-theme=dark] .bd-main img {
   align-items: flex-start;
 }
 
-/* Footer headings - consistent across all sections
-   - Uppercase for visual distinction
-   - 0.95rem provides subtle hierarchy without overwhelming
-   - Increased bottom margin for better separation from content */
+/* Footer headings */
 .footer-heading {
   font-size: 0.95rem;
   font-weight: 600;
@@ -152,8 +138,7 @@ html[data-theme=dark] .bd-main img {
   opacity: 0.9;
 }
 
-/* ---- Sponsors Section ---- */
-.footer-sponsors-column {
+ .footer-sponsors-column {
   align-items: flex-start;
 }
 
@@ -175,7 +160,7 @@ html[data-theme=dark] .bd-main img {
   opacity: 0.8;
 }
 
-/* Sponsor logo height of 50px for better visibility while maintaining clean layout */
+/* Sponsor logo*/
 .sponsor-logo {
   height: 50px;
   width: auto;
@@ -183,11 +168,7 @@ html[data-theme=dark] .bd-main img {
   display: block;
 }
 
-/* ---- Contact & Social Section ---- */
-/* Display all links (GitHub, Zulip, Mastodon, Bluesky) in single horizontal line
-   - Row layout with proper wrapping for responsive behavior
-   - Increased gap for better visual spacing between elements
-   - Small top margin adds consistent visual separation from Partners section */
+ /* Display all links*/
 .footer-contact-column {
   align-items: flex-start;
   flex-direction: row;
@@ -205,9 +186,7 @@ html[data-theme=dark] .bd-main img {
   margin-bottom: 0;
 }
 
-/* Contact links with icon alignment
-   - 0.625rem gap provides comfortable spacing between icon and text
-   - 1.25rem icon width ensures consistent alignment */
+/* Contact links with icon alignment */
 .footer-link {
   display: inline-flex;
   align-items: center;
@@ -230,11 +209,7 @@ html[data-theme=dark] .bd-main img {
   text-align: center;
 }
 
-/* Social media icons - horizontal layout in same line as contact links
-   - Icon-only design saves space while remaining recognizable
-   - 2.25rem button size provides good click target (36px)
-   - Horizontal alignment with wrapping for responsive behavior
-   - Increased gap for better visual spacing */
+/* Social media icons*/
 .footer-social-links {
   display: flex;
   flex-direction: row;
@@ -269,14 +244,9 @@ html[data-theme=dark] .bd-main img {
   font-size: 1.15rem;
 }
 
-/* ============================================
-   RESPONSIVE DESIGN
-   ============================================ */
 
-/* Mobile layout adjustments
-   - Stack footer columns vertically on smaller screens
-   - Center alignment for better visual balance on smaller screens
-   - Maintain adequate spacing even on mobile */
+
+/* Mobile layout adjustments */
 @media (max-width: 768px) {
   .bd-footer__inner {
     grid-template-columns: 1fr;
@@ -318,9 +288,7 @@ html[data-theme=dark] .bd-main img {
   }
 }
 
-/* Small mobile adjustments
-   - Reduced spacing for better fit
-   - 40px logo height maintains readability */
+/* Small mobile adjustments*/
 @media (max-width: 480px) {
   .footer-redesigned {
     gap: 1.5rem;
