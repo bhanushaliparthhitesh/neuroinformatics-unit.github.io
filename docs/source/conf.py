@@ -134,6 +134,10 @@ html_css_files = [
     "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
 ]
 
+html_js_files = [
+    "js/custom.js",
+]
+
 html_favicon = "_static/logo_light.png"
 
 # Cutomize the theme
@@ -198,6 +202,10 @@ html_sidebars = {
     "blog/**": [
         "ablog/postcard.html",
         "ablog/recentposts.html",
+    ],
+    "**": [
+        "sidebar-nav-bs",
+        "project-switcher.html",
     ],
 }
 
